@@ -350,7 +350,7 @@ function playerDead()
    loopPipeloop = null;
 
    //emit parent score
-   window.top.postMessage(score, '*');
+   window.top.postMessage({score, type: 'flappy_score'}, '*');
 
    //mobile browsers don't support buzz bindOnce event
    if(isIncompatible.any())
